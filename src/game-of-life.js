@@ -14,7 +14,7 @@ const CELL_SIZE = {
   height: 6
 };
 const DEBUG = false;
-const REFRESH_DELAY = 0;
+const REFRESH_DELAY = 50;
 let cont;
 let contSize = {
   width: 100,
@@ -44,7 +44,7 @@ function findField() {
 }
 
 function generateInitialCellState(colCounter, rowCounter) {
-  if (Math.random() > .8) {
+  if (Math.random() > .5) {
     return true;
   } else {
     return false;
