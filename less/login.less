@@ -1,0 +1,182 @@
+/*
+ * Copyright (c) 2013. Rflect, Alex K.
+ */
+
+/* Author:alexeykofficial@gmail.com (Alex K.) */
+
+/* Styles for login page. */
+@import 'lib.less';
+@import 'font.less';
+@import 'flexbox.less';
+
+html {
+  height: 100%;
+}
+
+body {
+  .default-font();
+  .flex-display();
+  .flex-direction();
+  .flex-wrap();
+  .justify-content(center);
+  .align-content();
+  .align-items(center);
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+}
+
+h1.header {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: 34px;
+  font-weight: normal;
+  color: #2c2c2c;
+
+  sup {
+    text-transform: uppercase;
+    color: gainsboro;
+  }
+}
+
+h2.header {
+  padding: 0 10px 10px;
+  margin-top: 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2c2c2c;
+}
+
+.login-cont {
+  padding-top: 40px;
+}
+
+.label {
+  text-align: center;
+}
+
+.buttons {
+  .flex-display();
+  .flex-direction(row);
+  padding: 20px;
+}
+
+@media (max-width: 390px) {
+  .buttons {
+    .flex-direction(column);
+    .align-items(center);
+  }
+}
+
+.inputs {
+  .flex-display();
+  .flex-direction(column);
+  .align-items(center);
+  padding: 20px;
+
+  input {
+    box-sizing: border-box;
+    font-size: 18px;
+    border: 1px solid #eee;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    background: #fff;
+
+    -webkit-appearance: none;
+    .border-radius(5px);
+
+    .transition(width);
+
+    &:focus, &:active {
+      background: #6a9dff;
+      color: white;
+      border-color: #6a9dff;
+      width: 320px;
+    }
+  }
+}
+
+.login-label {
+  line-height: 36px;
+}
+
+a.alt-login {
+  text-decoration: none;
+  color: #3399ff;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-input {
+  border: 1px solid rgb(229, 229, 229);
+  padding: 10px;
+  border-radius: 4px;
+  height: 46px;
+}
+
+.login-submit-cont {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.light-button() {
+  position: relative;
+  .default-font();
+  font-size: 14px;
+  line-height: 24px;
+  height: auto;
+  padding: 8px 16px;
+  border: 1px solid #39F;
+  color: #39F;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  vertical-align: top;
+  .border-radius(2px);
+  transition: box-shadow .1s, border .2s, background-color .2s, color .2s;
+  .no-tap-delay();
+
+}
+
+.login-submit {
+  .light-button();
+  .default-font();
+
+  width: 100px;
+  margin: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  padding: 10px 26px;
+  border: 1px solid rgb(128,128,128);
+  color: rgb(128,128,128);
+  background: #fff;
+  border-radius: 45px;
+  opacity: 1;
+  .transition(opacity);
+
+  &:hover,
+  &:active {
+    z-index: 1;
+    opacity: .7;
+  }
+}
+
+.canvas-cont {
+  width: 600px;
+  height: 600px;
+}
+
+canvas.field {
+  width: 600px;
+  height: 600px;
+}

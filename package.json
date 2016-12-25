@@ -1,0 +1,24 @@
+{
+  "name": "game-of-life",
+  "version": "0.0.1",
+  "description": "Convey's game of life",
+  "main": "",
+  "directories": {
+  },
+  "private": true,
+  "scripts": {
+    "build": "jade index.jade & lessc --clean-css less/all.less css/all.css"
+  },
+  "keywords": [
+    "login",
+    "page"
+  ],
+  "author": [
+    "alexeykcontact@gmail.com (Alex K)"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
