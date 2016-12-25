@@ -1,4 +1,4 @@
-Whisp login page
+Game of life 404 page.
 =============
 
-Login page for Whisp messenger.
+This is 404 page for Whisp with Conway's game of life running.

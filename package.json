@@ -1,7 +1,7 @@
 {
   "name": "game-of-life",
   "version": "0.0.1",
-  "description": "Convey's game of life",
+  "description": "Conway's game of life",
   "main": "",
   "directories": {
   },
