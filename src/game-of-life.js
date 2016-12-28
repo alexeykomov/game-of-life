@@ -15,6 +15,8 @@ const CELL_SIZE = {
 };
 const DEBUG = false;
 const REFRESH_DELAY = 50;
+const BACKGROUND_COLOR = 'black';
+const CELL_COLOR = 'magenta';
 let cont;
 let contSize = {
   width: 100,
@@ -72,7 +74,7 @@ function onLoad() {
   const state = generateInitialState(matrixSize);
 
   const context = field.getContext('2d');
-  context.fillStyle = 'black';
+  context.fillStyle = BACKGROUND_COLOR;
   context.fillRect(0, 0, matrixSize.width * CELL_SIZE.width,
       matrixSize.height * CELL_SIZE.height);
 
@@ -180,16 +182,16 @@ function drawState(field, state) {
   state.forEach((column, colIndex) => {
     column.forEach((row, rowIndex) => {
       if (row) {
-        context.fillStyle = 'magenta';
+        context.fillStyle = CELL_COLOR;
       } else {
-        context.fillStyle = 'black';
+        context.fillStyle = BACKGROUND_COLOR;
       }
       context.fillRect(colIndex * CELL_SIZE.width, rowIndex * CELL_SIZE.height,
           CELL_SIZE.width, CELL_SIZE.height);
       if (DEBUG) {
         context.fillStyle = 'red';
-        context.fillText(`${colIndex}, ${rowIndex}`,colIndex * CELL_SIZE.width +
-            CELL_SIZE.width / 2,
+        context.fillText(`${colIndex}, ${rowIndex}`, colIndex *
+            CELL_SIZE.width + CELL_SIZE.width / 2,
             rowIndex * CELL_SIZE.height + CELL_SIZE.height / 2);
       }
     })
