@@ -180,7 +180,7 @@ function drawState(field, state) {
   state.forEach((column, colIndex) => {
     column.forEach((row, rowIndex) => {
       if (row) {
-        context.fillStyle = 'white';
+        context.fillStyle = 'magenta';
       } else {
         context.fillStyle = 'black';
       }
